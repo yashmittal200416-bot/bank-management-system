@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Us | Bank Management</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Segoe UI;
+    background:linear-gradient(to right,#ffe8db,#dfe8ff);
+}
+header{
+    background:#3d43ff;
+    color:white;
+    text-align:center;
+    padding:18px;
+    font-size:30px;
+    font-weight:bold;
+}
+nav{
+    background:#232323;
+    padding:12px 0;
+}
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin:0;
+    padding:0;
+}
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:600;
+}
+nav ul li a:hover{color:#3d43ff;}
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:50px auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+}
+.card h2{
+    margin-top:0;
+    color:#3d43ff;
+}
+input,textarea{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+}
+button{
+    background:#3d43ff;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+}
+footer{
+    margin-top:60px;
+    background:#3d43ff;
+    color:white;
+    text-align:center;
+    padding:12px;
+}
+</style>
+</head>
+
+<body>
+
+<header>Bank Management System</header>
+
+<nav>
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="openaccount.html">Open Account</a></li>
+<li><a href="deposit.html">Deposit</a></li>
+<li><a href="withdraw.html">Withdraw</a></li>
+<li><a href="enquiry.html">Enquiry</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="admin.html">Admin</a></li>
+</ul>
+</nav>
+
+<div class="container">
+
+<!-- CONTACT INFO -->
+<div class="card">
+<h2>Get in Touch</h2>
+<p><b>Bank Name:</b> Digital Bank</p>
+<p><b>Address:</b> Saharanpur, Uttar Pradesh</p>
+<p><b>Phone:</b> +91 9876543210</p>
+<p><b>Email:</b> support@digitalbank.com</p>
+<p><b>Working Hours:</b> Mon–Fri (9AM – 5PM)</p>
+</div>
+
+<!-- CONTACT FORM -->
+<div class="card">
+<h2>Send Message</h2>
+
+<input placeholder="Your Name">
+<input placeholder="Your Email">
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button onclick="window.location.href='thankyou.html'">
+Send Message
+</button>
+
+</div>
+
+</div>
+
+<footer>
+© 2025 Bank Management | BCA Minor Project
+</footer>
+
+</body>
+</html>

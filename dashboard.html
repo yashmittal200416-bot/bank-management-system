@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard | Bank Management</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Segoe UI, sans-serif;
+    background:#eef0ff;
+}
+
+/* ===== LAYOUT ===== */
+.wrapper{
+    display:flex;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+    width:220px;
+    background:#2f2f2f;
+    color:white;
+    height:100vh;
+    padding-top:20px;
+}
+.sidebar h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    font-size:15px;
+}
+.sidebar a:hover{
+    background:#ff7a45;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main{
+    flex:1;
+    padding:30px;
+}
+
+/* ===== DASHBOARD CARDS ===== */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+.card h3{
+    font-size:14px;
+    color:gray;
+}
+.card p{
+    font-size:26px;
+    margin:5px 0;
+    color:#ff7a45;
+    font-weight:bold;
+}
+
+/* ===== TABLE ===== */
+.table-box{
+    margin-top:30px;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+}
+.table-box h3{
+    background:#ff7a45;
+    color:white;
+    padding:12px;
+    margin:0;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+th,td{
+    padding:12px;
+    text-align:left;
+}
+th{
+    background:#f4f4f4;
+}
+tr:nth-child(even){
+    background:#fafafa;
+}
+.btn{
+    background:#ff7a45;
+    color:white;
+    border:none;
+    padding:5px 12px;
+    border-radius:5px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- ===== SIDEBAR ===== -->
+    <div class="sidebar">
+        <h2>Bank Panel</h2>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="openaccount.html">Open Account</a>
+        <a href="deposit.html">Deposit</a>
+        <a href="withdraw.html">Withdraw</a>
+        <a href="enquiry.html">Enquiry</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin.html">Admin</a>
+        <a href="home.html">Go to Home</a>
+    </div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="main">
+
+        <h2>Dashboard</h2>
+
+        <!-- ===== CARDS ===== -->
+        <div class="cards">
+            <div class="card">
+                <h3>Total Accounts</h3>
+                <p>120</p>
+            </div>
+            <div class="card">
+                <h3>Total Deposits</h3>
+                <p>₹4,50,000</p>
+            </div>
+            <div class="card">
+                <h3>Total Withdrawals</h3>
+                <p>₹2,10,000</p>
+            </div>
+            <div class="card">
+                <h3>Active Users</h3>
+                <p>95</p>
+            </div>
+        </div>
+
+        <!-- ===== TABLE ===== -->
+        <div class="table-box">
+            <h3>Recent Accounts</h3>
+            <table>
+                <tr>
+                    <th>Account No</th>
+                    <th>Name</th>
+                    <th>Balance</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>1001</td>
+                    <td>Rahul Sharma</td>
+                    <td>₹15,000</td>
+                    <td>Active</td>
+                    <td><button class="btn">View</button></td>
+                </tr>
+                <tr>
+                    <td>1002</td>
+                    <td>Anita Verma</td>
+                    <td>₹28,500</td>
+                    <td>Active</td>
+                    <td><button class="btn">View</button></td>
+                </tr>
+                <tr>
+                    <td>1003</td>
+                    <td>Mohit Kumar</td>
+                    <td>₹9,200</td>
+                    <td>Inactive</td>
+                    <td><button class="btn">View</button></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

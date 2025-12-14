@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Login | Bank Management</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Segoe UI;
+    background:linear-gradient(to right,#ffe8db,#dfe8ff);
+}
+header{
+    background:#3d43ff;
+    color:white;
+    text-align:center;
+    padding:18px;
+    font-size:30px;
+    font-weight:bold;
+}
+.box{
+    width:350px;
+    margin:100px auto;
+    background:#3d43ff;
+    color:white;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+}
+input{
+    width:90%;
+    padding:10px;
+    margin:10px 0;
+}
+button{
+    width:100%;
+    padding:10px;
+    background:white;
+    border:none;
+    font-size:16px;
+    cursor:pointer;
+}
+p{color:yellow;}
+</style>
+</head>
+
+<body>
+
+<header>Bank Management System</header>
+
+<div class="box">
+<h2>User Login</h2>
+
+<input id="uid" placeholder="User ID">
+<input id="upass" type="password" placeholder="Password">
+
+<!-- IMPORTANT: type="button" -->
+<button type="button" onclick="userLogin()">Login</button>
+
+<p id="msg"></p>
+</div>
+
+<script>
+function userLogin(){
+    let id = document.getElementById("uid").value;
+    let pass = document.getElementById("upass").value;
+
+    if(id === "user" && pass === "1234"){
+        window.location.href = "dashboard.html";
+    } else {
+        document.getElementById("msg").innerText =
+            "❌ Invalid User ID or Password";
+    }
+}
+</script>
+
+</body>
+</html>

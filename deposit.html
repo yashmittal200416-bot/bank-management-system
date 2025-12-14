@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Deposit | Bank Management</title>
+<style>
+body{margin:0;font-family:Segoe UI;background:linear-gradient(to right,#ffe8db,#dfe8ff);}
+header{background:#3d43ff;color:white;text-align:center;padding:18px;font-size:30px;font-weight:bold;}
+nav{background:#232323;padding:12px;}
+nav ul{list-style:none;display:flex;justify-content:center;gap:35px;margin:0;}
+nav ul li a{color:white;text-decoration:none;font-size:18px;font-weight:600;}
+nav ul li a:hover{color:#3d43ff;}
+.box{width:450px;margin:70px auto;background:rgba(255,255,255,0.7);padding:30px;border-radius:15px;}
+.box h2{text-align:center;color:#3d43ff;}
+input{width:100%;padding:12px;margin:10px 0;border-radius:8px;border:1px solid #ccc;}
+button{width:100%;background:#3d43ff;color:white;border:none;padding:12px;border-radius:8px;font-size:18px;}
+button:hover{background:#3d43ff;}
+footer{margin-top:80px;background:#3d43ff;color:white;text-align:center;padding:15px;}
+</style>
+</head>
+
+<body>
+<header>Bank Management System</header>
+
+<nav>
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="openaccount.html">Open Account</a></li>
+<li><a href="deposit.html">Deposit</a></li>
+<li><a href="withdraw.html">Withdraw</a></li>
+<li><a href="enquiry.html">Enquiry</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="admin.html">Admin</a></li>
+</ul>
+</nav>
+
+<div class="box">
+<h2>Deposit Money</h2>
+
+<input id="accNo" placeholder="Account Number">
+<input id="amount" placeholder="Deposit Amount">
+
+<button onclick="deposit()">Deposit</button>
+<p id="msg"></p>
+</div>
+
+<script>
+function deposit() {
+    let accNo = document.getElementById("accNo").value;
+    let amount = Number(document.getElementById("amount").value);
+
+    let account = localStorage.getItem(accNo);
+    if(account==null){ alert("Account not found"); return; }
+
+    let acc = JSON.parse(account);
+    acc.balance += amount;
+
+    localStorage.setItem(accNo, JSON.stringify(acc));
+    document.getElementById("msg").innerText =
+        "New Balance: ₹"+acc.balance;
+}
+</script>
+
+
+<footer>© 2025 Bank Management | BCA Minor Project</footer>
+</body>
+</html>
+
+
